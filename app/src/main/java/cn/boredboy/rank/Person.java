@@ -1,7 +1,7 @@
 package cn.boredboy.rank;
 
 /**
- * Created by pc on 2016/12/15.
+ * 声明Person类，用于存储个人数据
  */
 
 public class Person {

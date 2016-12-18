@@ -49,6 +49,7 @@ public class MainActivity extends Activity implements SQL{
         bt_rank = (Button) findViewById(R.id.bt_rank);
         bt_create = (Button) findViewById(R.id.bt_create);
 
+//      初始化SqlSQLiteOpenHelper对象
         helper = DbManager.getInstance(this);
 
     }
@@ -62,7 +63,7 @@ public class MainActivity extends Activity implements SQL{
                 bundle.putString("sex", et_sex.getText().toString());
                 bundle.putString("score", et_score.getText().toString());
                 Log.d(TAG, "click: insert调用");
-                Toast.makeText(MainActivity.this, "insert被调用", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, "插入数据", Toast.LENGTH_SHORT).show();
                 insert(db, bundle);
                 break;
             case R.id.bt_update:
@@ -70,9 +71,8 @@ public class MainActivity extends Activity implements SQL{
             case R.id.bt_delete:
                 break;
             case R.id.bt_rank:
-//                跳转至排名界面
+//                跳转至Rank界面
                 Intent intent = new Intent(MainActivity.this, ListView.class);
-//                intent.putExtras(rank(db));
                 startActivity(intent);
                 break;
             case R.id.bt_create:

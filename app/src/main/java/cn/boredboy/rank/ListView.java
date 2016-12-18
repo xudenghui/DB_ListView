@@ -36,9 +36,11 @@ public class ListView extends Activity{
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.list);
+
         lv = (android.widget.ListView) findViewById(R.id.lv);
         lv.setAdapter(new MyAdapter());
 
+//      获取数据库对象
         db = SQLiteDatabase.openOrCreateDatabase("data/data/cn.boredboy.rank/databases/info.db", null);
         cursor = db.rawQuery("select * from "+Constant.TABLE_NAME, null);
         person = saveCursor(cursor, person);
@@ -66,7 +68,9 @@ public class ListView extends Activity{
         @Override
         public View getView(int i, View view, ViewGroup viewGroup) {
             Log.d(TAG, "getView坐标: "+i);
+
             Person p = person.get(i);
+//          获取ListView填充器
             LayoutInflater inflater = LayoutInflater.from(ListView.this);
             View v = inflater.inflate(R.layout.list_item, null);
             if(db == null) {

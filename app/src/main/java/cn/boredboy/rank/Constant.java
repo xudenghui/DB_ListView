@@ -1,7 +1,7 @@
 package cn.boredboy.rank;
 
 /**
- * Created by pc on 2016/12/15.
+ * 声明Constant类，用于存储数据库名、表名、列名
  */
 
 public class Constant{

@@ -15,6 +15,8 @@ public class MySQLiteOpenHelper extends SQLiteOpenHelper {
     public MySQLiteOpenHelper(Context context, String name, SQLiteDatabase.CursorFactory factory, int version) {
         super(context, name, factory, version);
     }
+
+//    简化构造函数
     public MySQLiteOpenHelper(Context context) {
         //调用父类方法创建数据库
         super(context, Constant.DATABASE_NAME, null, Constant.DATA_VERSION);

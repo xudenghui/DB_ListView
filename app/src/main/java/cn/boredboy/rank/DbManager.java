@@ -7,7 +7,7 @@ import android.util.Log;
 import static android.content.ContentValues.TAG;
 
 /**
- * Created by pc on 2016/12/15.
+ *规范SQLiteOpenHelper使用
  */
 
 public class DbManager {
